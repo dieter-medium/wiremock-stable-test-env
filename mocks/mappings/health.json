@@ -10,7 +10,7 @@
   },
   "response": {
     "status": 200,
-    "body": "{ \"status\": \"OK\" }",
+    "bodyFileName": "health.json",
     "headers": {
       "Content-Type": "application/json"
     }
