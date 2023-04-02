@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "^/users/uniform-delay-\\d*(?<!4\\d)\\d$",
+    "headers": {
+      "Host": {
+        "matches": "userservice.localtest.me.*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "delayDistribution": {
+      "type": "uniform",
+      "lower": 1900,
+      "upper": 2100
+    },
+    "bodyFileName": "userservice/get-user-happy-path.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

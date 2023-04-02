@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c9105c3-8afd-46b3-bdd6-69d6d3381a8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mocks/__files/userservice/happy-path.json" beforeDir="false" afterPath="$PROJECT_DIR$/mocks/__files/userservice/get-user-happy-path.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mocks/mappings/userservice/happy-path.json" beforeDir="false" afterPath="$PROJECT_DIR$/mocks/mappings/userservice/get-user-happy-path.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mocks/mappings/userservice/uniform-delay-response.json" beforeDir="false" afterPath="$PROJECT_DIR$/mocks/mappings/userservice/uniform-delay-response.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
