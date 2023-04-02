@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "^/users/\\d*404$",
+    "headers": {
+      "Host": {
+        "matches": "userservice.localtest.me.*"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": ""
+  }
+}

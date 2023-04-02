@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9105c3-8afd-46b3-bdd6-69d6d3381a8e" name="Changes" comment="" />
+    <list default="true" id="3c9105c3-8afd-46b3-bdd6-69d6d3381a8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/mocks/__files/userservice/happy-path.json" beforeDir="false" afterPath="$PROJECT_DIR$/mocks/__files/userservice/get-user-happy-path.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mocks/mappings/userservice/happy-path.json" beforeDir="false" afterPath="$PROJECT_DIR$/mocks/mappings/userservice/get-user-happy-path.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,5 +64,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed inital workspace" />
   </component>
 </project>
