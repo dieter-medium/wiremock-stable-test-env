@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPattern": "^/users$",
+    "headers": {
+      "Host": {
+        "matches": "userservice.localtest.me.*"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.firstName"
+      },
+      {
+        "matchesJsonPath": "$.lastName"
+      }
+    ]
+  },
+  "response": {
+    "status": 201,
+    "body": "",
+    "headers": {
+      "Location": "{{ request.baseUrl }}{{request.url }}/{{randomValue type='NUMERIC' length=6}}"
+    }
+  }
+}
