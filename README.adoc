@@ -1,0 +1,42 @@
+= README
+
+This project is an example of how to use WireMock to create a stable test environment for APIs.
+
+It is related to the Medium article: https://medium.com/towardsdev/testing-1-2-3-how-to-build-stable-test-environments-with-wiremock-55e5aae90fe4
+
+== Build and Run
+
+To build this project, run:
+
+[source,shell]
+docker build -f Dockerfile . -t my-wiremock:v2
+
+== Testing
+
+The following mocks can be tested:
+
+[source,shell]
+docker run -it --rm -p 9100:8080 my-wiremock:v2 --verbose --global-response-templating
+docker run -it --rm -p 9100:8080 -v $PWD/mocks:/home/wiremock my-wiremock:v2 --verbose --global-response-templating
+
+The first command runs the container with global response templating enabled. The second command mounts the mocks directory as a volume so that you can make dynamic updates to the mocks.
+
+
+The mocks can by tested with
+[source,shell]
+
+curl -i http://api1.localtest.me:9100/health
+curl -i http://userservice.localtest.me:9100/users/abc-1
+curl -i http://userservice.localtest.me:9100/users/abc-1401
+curl -i http://userservice.localtest.me:9100/users/abc-1404
+curl -i -X POST -H "Content-Type: application/json" -d '{}' http://userservice.localtest.me:9100/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName": "Terry", "lastName": "Medhurst" }' http://userservice.localtest.me:9100/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName": "Terry-404", "lastName": "Medhurst2" }' http://userservice.localtest.me:9100/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName": "Terry-401", "lastName": "Medhurst2" }' http://userservice.localtest.me:9100/users
+time curl -i http://userservice.localtest.me:9100/users/fixed-delay-10000
+time curl -i http://userservice.localtest.me:9100/users/uniform-delay-10000
+curl -i http://userservice.localtest.me:9100/users/reset-10000
+
+Note that you may need to update the URLs and other parameters in the curl commands to match your specific test environment.
+
+For more information on how to use WireMock, please refer to the official documentation.
