@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "urlPattern": "^/users/\\d*(?<!4\\d)\\d$",
+    "urlPattern": "^/users/abc-\\d*(?<!4\\d)\\d$",
     "headers": {
       "Host": {
         "matches": "userservice.localtest.me.*"

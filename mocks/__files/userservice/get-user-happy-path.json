@@ -1,6 +1,6 @@
 {
 
-    "id": 1,
+    "id": {{ regexExtract request.pathSegments.[1] '(\d+)$' }},
     "firstName": "Terry",
     "lastName": "Medhurst",
     "maidenName": "Smitham",
