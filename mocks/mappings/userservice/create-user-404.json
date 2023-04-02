@@ -14,7 +14,7 @@
       {
         "matchesJsonPath":  {
           "expression": "$.firstName",
-          "matches": ".*(?<!-404)(?<!-401)$"
+          "matches": ".*-404$"
         }
       },
       {
@@ -23,10 +23,7 @@
     ]
   },
   "response": {
-    "status": 200,
-    "headers": {
-      "Content-Type": "application/json"
-    },
-    "bodyFileName": "userservice/create-user.json"
+    "status": 404,
+    "body": ""
   }
 }
