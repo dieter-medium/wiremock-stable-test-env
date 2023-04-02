@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "^/users/fixed-delay-\\d*(?<!4\\d)\\d$",
+    "headers": {
+      "Host": {
+        "matches": "userservice.localtest.me.*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 2000,
+    "bodyFileName": "userservice/get-user-happy-path.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
