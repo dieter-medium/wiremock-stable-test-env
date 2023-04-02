@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "^/users/reset-\\d*(?<!4\\d)\\d$",
+    "headers": {
+      "Host": {
+        "matches": "userservice.localtest.me.*"
+      }
+    }
+  },
+  "response": {
+    "fault": "CONNECTION_RESET_BY_PEER"
+  }
+}
